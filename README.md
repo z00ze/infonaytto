@@ -4,6 +4,9 @@ Infonäyttö palvelimella pyöritettäväksi. Sivu on jaettu kuuteen eri lohkoon
 <img src="Screenshot-1.png" width="600">
 
 ## Asennus ja käyttö
+Asenna:
+Tarvittavat riippuvuudet.
+Käyttö:
 python infonaytto.py
 
 ## Käyttäjä
