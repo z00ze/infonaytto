@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="refresh" content="60">
+        <meta http-equiv="refresh" content="3600">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+        <style>
+            * { 
+                font-family: Lato;
+                font-size: 7vh;
+            }
+            .wrapper {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                position: absolute;
+            }
+            body {
+              margin: 0;
+              overflow: hidden;
+              background: #061928;
+            }
+            .head {
+                padding: 2vh;
+                color: white;
+            }
+            p {
+                padding: 0px;
+            }
+        </style>
+    </head>
+<body onload="getData()">
+    <div class="wrapper">
+        <div class="head">
+            <div id="quote"></div>
+        </div>
+
+    </div>
+    <script>
+        function getData(){
+            var xhttp = new XMLHttpRequest();
+            var url = "https://api.whatdoestrumpthink.com/api/v1/quotes/random";
+            xhttp.open("GET",url,false);
+            xhttp.send(null);
+            var response = JSON.parse(xhttp.responseText);
+            document.getElementById("quote").innerHTML = response["message"]+'<br>(c) Trump';
+
+        }
+    </script>
+</body></html>

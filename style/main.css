@@ -1,0 +1,131 @@
+/** GENERAL */
+* { 
+    font-family: Lato;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: aliceblue;
+    font-family: Lato;
+    font-size: 4vh;
+}
+
+.none {
+    display: none;
+    visibility: hidden;
+}
+
+/** GRID */
+.grid-container {
+    display: grid;
+    grid-template-columns: 48vw 24vw 24vw;
+    grid-template-rows: 43vh 43vh;
+    background-color: #FFF;
+    background-image: url("../images/bg.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    padding: 2vh 1vw 2vh 1vw;
+    grid-gap: 2vh 1vw;
+}
+@media screen and (max-width:1250px) {
+    body {
+        overflow: scroll;
+    }
+    #clock {
+        display: none;
+        visibility: hidden;
+    }
+    .grid-container {
+        grid-template-columns: 90vw;
+        grid-template-rows: 50vh;
+        background-image: url("");
+        width: 100vw;
+        padding: 0 5vw 0 5vw !important;
+        
+    }
+    .grid-item {
+    }
+    #header h1 {
+        font-size: 3vw !important;
+    }
+}
+.grid-item {
+    font-size: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+.grid-item .grid-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+.grid-title {
+    width: 100%;
+    height: 4vh;
+    background-color: #6C5B4A;
+    padding-left: 2vh;
+}
+.grid-title h1 {
+    float: left;
+}
+.grid-title img {
+    float: right;
+    height: 2vh;
+    margin: 1vh;
+}
+.border-rad {
+    border-top-left-radius: 0.5vh;
+    border-top-right-radius: 0.5vh;
+}
+
+.grid-title h1 {
+    color: aliceblue;
+    font-size: 3vh;
+    padding-top: 0.5vh;
+}
+
+iframe {
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+}
+
+/** HEADER */
+#header {
+    width: 100%;
+    height: 8vh;
+    background-color: #80AB2F;
+}
+#header img {
+    height: 6vh;
+    margin: 1vh;
+    float: left;
+}
+#header h1 {
+    font-size: 4vh;
+    margin: 2vh;
+    float: left;
+}
+#weatherNow {
+    font-size: 6vh;
+    float: right !important;
+}
+#clock {
+    font-size: 6vh;
+    float: right !important;
+}
