@@ -64,11 +64,18 @@ class restApi(object):
 				rawbody = cherrypy.request.body.read(int(cl))
 				body = json.loads(rawbody)
 				dbstuff.newUser(body)
+			if(x == 'deleteuser'):
+				cl = cherrypy.request.headers['Content-Length']
+				rawbody = cherrypy.request.body.read(int(cl))
+				body = json.loads(rawbody)
+				dbstuff.deleteUser(body)
 			if(x == 'swap'):
 				cl = cherrypy.request.headers['Content-Length']
 				rawbody = cherrypy.request.body.read(int(cl))
 				body = json.loads(rawbody)
 				dbstuff.swapBlocks(body)
+			if(x == 'getAll'):
+				return dbstuff.getAll()
 			return '{"post":"successfull"}'
 		else:
 			return '{"post":"failed"}'

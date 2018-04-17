@@ -24,7 +24,11 @@ def newBlock(obj):
 def newUser(obj):
 	with sqlite3.connect(db,timeout=10) as connection:
 			connection.execute('INSERT INTO users (name,password) VALUES (?,?)',[obj['name'],hashlib.sha224(obj['password'].encode()).hexdigest()])
-		
+			
+def deleteUser(obj):
+	with sqlite3.connect(db,timeout=10) as connection:
+			connection.execute('DELETE FROM users WHERE name = "'+obj['name']+'"')
+
 def updateBlock(obj):
 	with sqlite3.connect(db,timeout=10) as connection:
 			connection.execute('DELETE FROM blocks WHERE position = '+obj['position'])
@@ -45,6 +49,15 @@ def getBlocks():
 		cursor = connection.execute('SELECT * FROM blocks')
 		rows = cursor.fetchall()
 		return rows
+
+def getAll():
+	with sqlite3.connect(db,timeout=10) as connection:
+		connection.text_factory = str
+		cursor = connection.execute('SELECT * FROM blocks')
+		blocks = cursor.fetchall()
+		cursor = connection.execute('SELECT * FROM users')
+		users = cursor.fetchall()
+		return '['+json.dumps(blocks)+','+json.dumps(users)+']'
 
 def getBlock(position):
 	with sqlite3.connect(db,timeout=10) as connection:
