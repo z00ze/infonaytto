@@ -6,6 +6,7 @@ Infonäyttö palvelimella pyöritettäväksi. Sivu on jaettu kuuteen eri lohkoon
 ## Asennus ja käyttö
 Asenna:
 Tarvittavat riippuvuudet.
+
 Käyttö:
 python infonaytto.py
 
