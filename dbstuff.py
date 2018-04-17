@@ -30,6 +30,10 @@ def updateBlock(obj):
 			connection.execute('DELETE FROM blocks WHERE position = '+obj['position'])
 			connection.execute('INSERT INTO blocks (position,name,url) VALUES (?,?,?)',[obj['position'],obj['name'],obj['url']])
 
+def deleteBlock(obj):
+	with sqlite3.connect(db,timeout=10) as connection:
+			connection.execute('DELETE FROM blocks WHERE position = '+obj['uid'])
+
 def updateListBlock(listA):
 	with sqlite3.connect(db,timeout=10) as connection:
 			connection.execute('DELETE FROM blocks WHERE position = '+str(listA[1]))

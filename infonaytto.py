@@ -23,7 +23,7 @@ def startJSfunctions():
 def getBlock(obj):
 	if(int(obj[1])>5):
 		return ''
-	return '<div class="grid-item"><div class="grid-wrapper border-rad"><div class="grid-title border-rad"><h1>'+str(obj[2])+'</h1><a href="' + str(obj[3]) + '" target="_blank"><img src="images/fullscreenicon.png"></a></div><iframe scrolling="no" src="' + str(obj[3]) + '" frameborder="0" allowfullscreen align="center"></iframe></div></div>'
+	return '<div class="grid-item"><div class="grid-wrapper border-rad"><div uid="'+str(obj[0])+'" class="grid-title border-rad"><h1>'+str(obj[2])+'</h1><a href="' + str(obj[3]) + '" target="_blank"><img src="images/fullscreenicon.png"></a></div><iframe scrolling="no" src="' + str(obj[3]) + '" frameborder="0" allowfullscreen align="center"></iframe></div></div>'
 
 
 @cherrypy.expose
@@ -58,7 +58,7 @@ class restApi(object):
 				cl = cherrypy.request.headers['Content-Length']
 				rawbody = cherrypy.request.body.read(int(cl))
 				body = json.loads(rawbody)
-				dbstuff.deleteBlock(body['uid'])
+				dbstuff.deleteBlock(body)
 			if(x == 'newuser'):
 				cl = cherrypy.request.headers['Content-Length']
 				rawbody = cherrypy.request.body.read(int(cl))
