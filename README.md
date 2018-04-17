@@ -9,7 +9,6 @@ Tietokannassa käyttäjä nimellä <b>admin</b> jonka salasana on <b>deleteME</b
 ## Rajapinnat (JSON)
 
 ### POST /new
-Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -25,7 +24,6 @@ Body
 Luo uuden lohkon, korvaa siinä paikassa olleen lohkon.
 
 ### POST /update
-Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -41,7 +39,6 @@ Body
 Päivittää kyseisessä paikassa olevan lohkon uusilla tiedoilla.
 
 ### POST /delete
-Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -55,7 +52,6 @@ Body
 Poistaa lohkon uniikin id:n mukaan.
 
 ### POST /newuser
-Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -70,7 +66,6 @@ Body
 Luo uuden käyttäjän.
 
 ### POST /deleteuser
-Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -84,7 +79,6 @@ Body
 Poistaa käyttäjän nimen perusteella.
 
 ### POST /swap
-Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -94,3 +88,17 @@ Body
   [0,1]
 ```
 Vaihtaa kahden lohkon paikkoja.
+
+## RESPONSES
+SUCCESFULL
+```
+{
+	"post": "successfull"
+}
+```
+FAILED
+```
+{
+	"post": "failed"
+}
+```
