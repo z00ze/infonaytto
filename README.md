@@ -24,7 +24,7 @@ Body
 ```
 
 ### POST /update
-Example request:
+Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -38,7 +38,7 @@ Body
   }
 ```
 ### POST /delete
-Example request:
+Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -51,7 +51,7 @@ Body
 ```
 
 ### POST /newuser
-Example request:
+Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -65,7 +65,7 @@ Body
 ```
 
 ### POST /deleteuser
-Example request:
+Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
@@ -78,7 +78,7 @@ Body
 ```
 
 ### POST /swap
-Example request:
+Esimerkki kutsu
 ```
 Headers
    Authorization: Basic YWRtaW46ZGVsZXRlTUU=
