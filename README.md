@@ -3,6 +3,9 @@ Infonäyttö palvelimella pyöritettäväksi. Sivu on jaettu kuuteen eri lohkoon
 
 <img src="Screenshot-1.png" width="600">
 
+## Asennus ja käyttö
+python infonaytto.py
+
 ## Käyttäjä
 Tietokannassa käyttäjä nimellä <b>admin</b> jonka salasana on <b>deleteME</b>
 
@@ -88,6 +91,14 @@ Body
   [0,1]
 ```
 Vaihtaa kahden lohkon paikkoja.
+
+### POST /getAll
+```
+Headers
+   Authorization: Basic YWRtaW46ZGVsZXRlTUU=
+   Content-Type: application/json
+```
+RETURNS users and blocks tables from database. `[ [blocks], [users] ]`
 
 ## RESPONSES
 SUCCESFULL
